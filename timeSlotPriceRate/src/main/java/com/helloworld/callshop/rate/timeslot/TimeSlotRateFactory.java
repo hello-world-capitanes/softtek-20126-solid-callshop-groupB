@@ -1,4 +1,4 @@
-package com.helloworld.callshop.timeslot;
+package com.helloworld.callshop.rate.timeslot;
 
 
 import com.helloworld.callshop.rater.rate.Rate;

@@ -1,7 +1,5 @@
-package com.helloworld.callshop.timeslot;
+package com.helloworld.callshop.rate.timeslot;
 
-import java.time.Duration;
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Timeslot {

@@ -5,15 +5,11 @@ import com.helloworld.callshop.rater.rate.Rate;
 import com.helloworld.callshop.rater.rate.RateableCall;
 import com.helloworld.callshop.rater.rate.RatesRepository;
 import com.helloworld.callshop.rater.rate.factory.ParametersReader;
-import com.helloworld.callshop.rater.rate.factory.RateFactoriesConfigReader;
 import com.helloworld.callshop.rater.rate.factory.RateFactoriesContainer;
 import com.helloworld.callshop.rater.rate.factory.RateFactory;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
 
