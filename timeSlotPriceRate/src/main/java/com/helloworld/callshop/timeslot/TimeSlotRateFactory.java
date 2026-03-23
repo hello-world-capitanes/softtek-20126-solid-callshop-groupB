@@ -9,6 +9,10 @@ import java.util.function.Predicate;
 
 public class TimeSlotRateFactory implements RateFactory {
 
+    private static final String DESCRIPTION = "Tarifa cambiante por franjas horarias (se aplican otras tarifas diferentes según la hora)";
+    private static final String ID = "TIME";
+    private static final String PERCENT_NAME = "percent";
+
     // TODO todos los que devuelva NULL o ""
     @Override
     public Rate makeRate(ParametersReader parametersReader) throws InvalidParameterValueException, RateBuilderException {
@@ -17,14 +21,9 @@ public class TimeSlotRateFactory implements RateFactory {
     }
 
     @Override
-    public String getDescription() {
-        return "" ;
-    }
+    public String getDescription() { return DESCRIPTION; }
 
-    @Override
-    public String getId() {
-        return "";
-    }
+    public String getId() { return ID; }
 
     @Override
     public List<Parameter> getBasicParameterList() {
