@@ -8,6 +8,7 @@ import com.helloworld.callshop.rater.rate.factory.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -100,9 +101,17 @@ public class TimeSlotRateFactory implements RateFactory {
 
     @Override
     public List<Parameter> getBasicParameterList() {
-        return RateFactory.super.getBasicParameterList();
-    }
+        List<Parameter> parameters = new ArrayList<>(RateFactory.super.getBasicParameterList());
 
+        parameters.add(horaInicio1Param);
+        parameters.add(tarifaNombre1Param);
+        parameters.add(horaInicio2Param);
+        parameters.add(tarifaNombre2Param);
+        parameters.add(horaInicio3Param);
+        parameters.add(tarifaNombre3Param);
+
+        return parameters;
+    }
     @Override
     public Predicate<Object> getNameValidator() {
         return RateFactory.super.getNameValidator();
