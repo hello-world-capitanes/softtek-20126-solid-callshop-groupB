@@ -40,10 +40,11 @@ public class TimeSlotRateFactory implements RateFactory {
     private final Parameter tarifaNombre3Param = new Parameter(TARIFA_NOMBRE_3, "Nombre de la tarifa para el tercer timeslot", rateNameValidator);
 
 
+
     @Override
     public Rate makeRate(ParametersReader parametersReader) throws InvalidParameterValueException, RateBuilderException {
         List<Parameter> parameters = getBasicParameterList();
-        
+
 
     }
 
