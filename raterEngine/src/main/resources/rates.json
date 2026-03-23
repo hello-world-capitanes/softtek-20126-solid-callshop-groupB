@@ -1,0 +1,42 @@
+{
+  "autor": "Santiago López Jara",
+  "fecha": "2026-03-20",
+
+  "tarifas": [
+    {
+      "tipo_tarifa": "fixprice",
+      "parametros": {
+        "nombre_tarifa": "tarifa_noche",
+        "precio_fijo": 0.01
+      }
+    },
+    {
+      "tipo_tarifa": "fixprice",
+      "parametros": {
+        "nombre_tarifa": "tarifa_dia",
+        "precio_fijo": 0.05
+      }
+    },
+    {
+      "tipo_tarifa": "percentual",
+      "parametros": {
+        "nombre_tarifa": "tarifa_punta",
+        "porcentaje": 20
+      }
+    },
+    {
+      "tipo_tarifa": "timeslot",
+      "parametros": {
+        "nombre_tarifa": "tarifa_franjas",
+        "start1": "00:00",
+        "rateName1": "tarifa_noche",
+
+        "start2": "08:00",
+        "rateName2": "tarifa_dia",
+
+        "start3": "18:00",
+        "rateName3": "tarifa_punta"
+      }
+    }
+  ]
+}
