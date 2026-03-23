@@ -44,6 +44,11 @@ public class RatesEngine {
         XMLConfigReader xmlConfigReader = new XMLConfigReader();
         xmlConfigReader.readConfiguration("configuration.xml");
         engine.factoriesContainer.createFactories(xmlConfigReader);
+
+        // Cargar tarifas desde JSON
+        JSONParameterReader jsonParameterReader = new JSONParameterReader();
+        JsonRateLoader jsonLoader = new JsonRateLoader(engine.factoriesContainer, jsonParameterReader);
+        jsonLoader.loadRates();
     }
 
     private String selectRateFactory() {
