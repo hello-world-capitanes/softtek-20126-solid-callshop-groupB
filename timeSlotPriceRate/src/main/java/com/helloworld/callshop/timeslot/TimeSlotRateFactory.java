@@ -12,12 +12,13 @@ public class TimeSlotRateFactory implements RateFactory {
     // TODO todos los que devuelva NULL o ""
     @Override
     public Rate makeRate(ParametersReader parametersReader) throws InvalidParameterValueException, RateBuilderException {
-        return null;
+        String name = (String) parametersReader.getValue(RATE_NAME_NAME);
+        return new TimeSlotRate(name);
     }
 
     @Override
     public String getDescription() {
-        return "";
+        return "" ;
     }
 
     @Override
