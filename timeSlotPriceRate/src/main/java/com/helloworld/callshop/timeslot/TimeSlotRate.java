@@ -10,13 +10,15 @@ import java.util.List;
 public class TimeSlotRate implements Rate {
     private final List<Timeslot> slots;
     private final List<Rate> rates;
+    private final String name;
 
-    public TimeSlotRate(List<Timeslot> slots, List<Rate> rates) {
+    public TimeSlotRate(String name, List<Timeslot> slots, List<Rate> rates) {
         if (slots == null || rates == null || slots.size() != 3 || rates.size() != 3) {
             throw new IllegalArgumentException("Debe haber exactamente 3 timeslots y 3 tarifas");
         }
         this.slots = slots;
         this.rates = rates;
+        this.name = name;
     }
 
     @Override
@@ -34,6 +36,6 @@ public class TimeSlotRate implements Rate {
 
     @Override
     public String getName() {
-        return "TimeSlotRate";
+        return name;
     }
 }

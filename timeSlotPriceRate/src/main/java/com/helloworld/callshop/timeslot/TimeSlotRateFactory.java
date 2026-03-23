@@ -67,7 +67,7 @@ public class TimeSlotRateFactory implements RateFactory {
 
         List<Timeslot> slots= List.of(new Timeslot(hora1, hora2), new Timeslot(hora2, hora3), new Timeslot(hora3, hora1));
         List<Rate> rates= List.of(rate1, rate2, rate3);
-        return new TimeSlotRate(slots, rates);
+        return new TimeSlotRate(nombre, slots, rates);
     }
 
     private LocalTime parseTime(Object value) throws InvalidParameterValueException {
