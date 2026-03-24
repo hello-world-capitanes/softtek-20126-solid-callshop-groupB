@@ -36,16 +36,13 @@ public class JsonRateLoader {
 
             if (factory != null) {
                 try {
-                    ParametersReader reader = new ParametersReader() {
-                        @Override
-                        public ParametersMapper readParameters(List<Parameter> parameters) {
-                            ParametersMapperImpl mapper = new ParametersMapperImpl();
-                            Map<String, Object> params = rateConfig.getParametros();
-                            if (params != null) {
-                                mapper.putAll(params);
-                            }
-                            return mapper;
+                    ParametersReader reader = parameters -> {
+                        ParametersMapperImpl mapper = new ParametersMapperImpl();
+                        Map<String, Object> params = rateConfig.getParametros();
+                        if (params != null) {
+                            mapper.putAll(params);
                         }
+                        return mapper;
                     };
 
                     Rate rate = factory.makeRate(reader);
