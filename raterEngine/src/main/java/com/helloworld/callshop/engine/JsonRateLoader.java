@@ -25,9 +25,9 @@ public class JsonRateLoader {
         this.factoriesContainer = factoriesContainer;
         this.jsonParameterReader = jsonParameterReader;
     }
-   // Se ha utilizado una clase anonima para implementar la interfaz ParametersReader que es la que necesita
-   // la factoria
-   //No se ha hecho en una clase aparte por que solo se va a utilizar en este contexto
+   // Se ha utilizado una lamda para implementar la interfaz ParametersReader que es la que necesita la factoria que es la que necesita la factoria la instancia de la clase que previamente
+   // ya la tiene implementada que es ParametersMapperImpl
+   // No se ha hecho en una clase aparte porque solo se va a utilizar en este unico contexto y es muy breve
     public void loadRates() throws IOException {
         RatesJson ratesJson = jsonParameterReader.readJSONFile();
         for (RateConfig rateConfig : ratesJson.getTarifas()) {
